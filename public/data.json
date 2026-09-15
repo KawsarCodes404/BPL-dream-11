@@ -1,0 +1,92 @@
+[
+  {
+    "playerName": "Shakib Al Hasan",
+    "image": "https://static.india.com/wp-content/uploads/2024/02/David-Warner-6-2.jpg?impolicy=Medium_Widthonly&w=400&h=800",
+    "origin": "Bangladesh",
+    "playerType": "All-Rounder",
+    "BowlingStyle": "Left-arm Orthodox",
+    "BattingStyle": "Left-hand Bat",
+    "Price": 8500000
+  },
+  {
+    "playerName": "Babar Azam",
+    "image": "https://static.india.com/wp-content/uploads/2024/02/David-Warner-6-2.jpg?impolicy=Medium_Widthonly&w=400&h=800",
+    "origin": "Pakistan",
+    "playerType": "Batter",
+    "BowlingStyle": "Right-arm Off Break",
+    "BattingStyle": "Right-hand Bat",
+    "Price": 9000000
+  },
+  {
+    "playerName": "Virat Kohli",
+    "image": "https://static.india.com/wp-content/uploads/2024/02/David-Warner-6-2.jpg?impolicy=Medium_Widthonly&w=400&h=800",
+    "origin": "India",
+    "playerType": "Batter",
+    "BowlingStyle": "Right-arm Medium",
+    "BattingStyle": "Right-hand Bat",
+    "Price": 10000000
+  },
+  {
+    "playerName": "Rashid Khan",
+    "image": "https://static.india.com/wp-content/uploads/2024/02/David-Warner-6-2.jpg?impolicy=Medium_Widthonly&w=400&h=800",
+    "origin": "Afghanistan",
+    "playerType": "Bowler",
+    "BowlingStyle": "Right-arm Leg Break",
+    "BattingStyle": "Right-hand Bat",
+    "Price": 9500000
+  },
+  {
+    "playerName": "Ben Stokes",
+    "image": "https://static.india.com/wp-content/uploads/2024/02/David-Warner-6-2.jpg?impolicy=Medium_Widthonly&w=400&h=800",
+    "origin": "England",
+    "playerType": "All-Rounder",
+    "BowlingStyle": "Right-arm Fast-Medium",
+    "BattingStyle": "Left-hand Bat",
+    "Price": 9200000
+  },
+  {
+    "playerName": "Jasprit Bumrah",
+    "image": "https://static.india.com/wp-content/uploads/2024/02/David-Warner-6-2.jpg?impolicy=Medium_Widthonly&w=400&h=800",
+    "origin": "India",
+    "playerType": "Bowler",
+    "BowlingStyle": "Right-arm Fast",
+    "BattingStyle": "Right-hand Bat",
+    "Price": 8800000
+  },
+  {
+    "playerName": "Jos Buttler",
+    "image": "https://static.india.com/wp-content/uploads/2024/02/David-Warner-6-2.jpg?impolicy=Medium_Widthonly&w=400&h=800",
+    "origin": "England",
+    "playerType": "Wicket-Keeper Batter",
+    "BowlingStyle": "Right-arm Medium",
+    "BattingStyle": "Right-hand Bat",
+    "Price": 8700000
+  },
+  {
+    "playerName": "Trent Boult",
+    "image": "https://static.india.com/wp-content/uploads/2024/02/David-Warner-6-2.jpg?impolicy=Medium_Widthonly&w=400&h=800",
+    "origin": "New Zealand",
+    "playerType": "Bowler",
+    "BowlingStyle": "Left-arm Fast-Medium",
+    "BattingStyle": "Left-hand Bat",
+    "Price": 7800000
+  },
+  {
+    "playerName": "Glenn Maxwell",
+    "image": "https://static.india.com/wp-content/uploads/2024/02/David-Warner-6-2.jpg?impolicy=Medium_Widthonly&w=400&h=800",
+    "origin": "Australia",
+    "playerType": "All-Rounder",
+    "BowlingStyle": "Right-arm Off Break",
+    "BattingStyle": "Right-hand Bat",
+    "Price": 8200000
+  },
+  {
+    "playerName": "Mustafizur Rahman",
+    "image": "https://static.india.com/wp-content/uploads/2024/02/David-Warner-6-2.jpg?impolicy=Medium_Widthonly&w=400&h=800",
+    "origin": "Bangladesh",
+    "playerType": "Bowler",
+    "BowlingStyle": "Left-arm Fast-Medium",
+    "BattingStyle": "Left-hand Bat",
+    "Price": 7200000
+  }
+]
