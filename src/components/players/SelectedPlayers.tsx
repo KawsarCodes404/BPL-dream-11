@@ -1,5 +1,15 @@
+import type { Dispatch, SetStateAction } from "react";
+import type { Iplayer } from "../../types/player";
 
-const SelectedPlayers = () => {
+interface ISelectedPlayersProps {
+    selectedPlayers: Iplayer[];
+    setselectedPlayers: Dispatch<SetStateAction<Iplayer[]>>
+}
+
+const SelectedPlayers = ({
+    setselectedPlayers,
+    selectedPlayers
+} : ISelectedPlayersProps) => {
     return (
         <div>
             selected players

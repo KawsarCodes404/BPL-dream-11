@@ -1,63 +1,50 @@
-// import { FaUser } from "react-icons/fa";
-// import type { Iplayer } from "../../types/player";
-
-// const PlayerCard = ({player} : {player : Iplayer}) => {
-//     return (
-//         <div className="card bg-base-100 shadow-sm">
-
-//             <figure>
-//                 <img
-//                     src={player.image}
-//                     alt="Shoes" className="h-80 w-90" />
-//             </figure>
-
-//             <div className="card-body space-y-3">
-
-//                 <h2 className="card-title">
-//                     <FaUser />
-//                     {player.playerName}
-//                 </h2>
-
-
-//                 <div className="flex justify-between gap-4 items-center">
-
-//                     <p className="font-bold">{player.origin}</p>
-
-//                     <button className="btn">{player.playerType}</button>
-//                 </div>
-
-//                 <div className="divider" />
-
-//                 <h2 className="font-bold text-2xl">Rating</h2>
-
-
-//                 <div className="flex justify-between gap-4 items-center">
-
-//                     <p className="font-bold">{player.BattingStyle}</p>
-
-//                     <button className="btn">{player.BowlingStyle}</ button>
-//                 </div>
-
-
-//                 <div className="card-actions justify-between items-center">
-//                     <h2 className="font-bold text-2xl">${player.Price}</h2>
-
-//                     <button className="btn ">Choose Player</button>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default PlayerCard;
-
-
-
-
 import { FaUser } from "react-icons/fa";
 import type { Iplayer } from "../../types/player";
+import { useState, type Dispatch, type SetStateAction } from "react";
+import { Bounce, toast } from "react-toastify";
 
-const PlayerCard = ({ player }: { player: Iplayer }) => {
+interface IPlayerCardProps {
+    player: Iplayer;
+    coin: number;
+    setcoin: Dispatch<SetStateAction<number>>;
+    selectedPlayers: Iplayer[];
+    setselectedPlayers: Dispatch<SetStateAction<Iplayer[]>>
+}
+
+const PlayerCard = ({
+    player,
+    coin,
+    setcoin,
+    setselectedPlayers,
+    selectedPlayers
+}: IPlayerCardProps) => {
+
+    const [isSelected, setisSelected] = useState(false);
+
+    const handleSelectPlayer = () => {
+        // setisSelected(true);
+        const newPrice = coin - player.Price;
+
+        if (newPrice >= 0) {
+            setcoin(newPrice);
+            setisSelected(true);
+
+            toast.success(`${player.playerName} is purchased successfully`, {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                transition: Bounce,
+            });
+        }
+        else toast.error('Coin is not enough to purchase');
+    }
+
+
     return (
         <div className="card bg-base-100 border border-base-200 shadow-md hover:shadow-xl transition-shadow duration-300">
             {/* Player Image */}
@@ -128,8 +115,12 @@ const PlayerCard = ({ player }: { player: Iplayer }) => {
                         </p>
                     </div>
 
-                    <button className="btn btn-primary">
-                        Choose Player
+                    <button
+                        onClick={() => handleSelectPlayer()}
+                        className="btn btn-primary"
+                        disabled={isSelected}
+                    >
+                        {isSelected ? "Selected" : "Choose Player"}
                     </button>
                 </div>
             </div>
@@ -138,3 +129,64 @@ const PlayerCard = ({ player }: { player: Iplayer }) => {
 };
 
 export default PlayerCard;
+
+
+
+
+
+
+
+
+
+// import { FaUser } from "react-icons/fa";
+// import type { Iplayer } from "../../types/player";
+
+// const PlayerCard = ({player} : {player : Iplayer}) => {
+//     return (
+//         <div className="card bg-base-100 shadow-sm">
+
+//             <figure>
+//                 <img
+//                     src={player.image}
+//                     alt="Shoes" className="h-80 w-90" />
+//             </figure>
+
+//             <div className="card-body space-y-3">
+
+//                 <h2 className="card-title">
+//                     <FaUser />
+//                     {player.playerName}
+//                 </h2>
+
+
+//                 <div className="flex justify-between gap-4 items-center">
+
+//                     <p className="font-bold">{player.origin}</p>
+
+//                     <button className="btn">{player.playerType}</button>
+//                 </div>
+
+//                 <div className="divider" />
+
+//                 <h2 className="font-bold text-2xl">Rating</h2>
+
+
+//                 <div className="flex justify-between gap-4 items-center">
+
+//                     <p className="font-bold">{player.BattingStyle}</p>
+
+//                     <button className="btn">{player.BowlingStyle}</ button>
+//                 </div>
+
+
+//                 <div className="card-actions justify-between items-center">
+//                     <h2 className="font-bold text-2xl">${player.Price}</h2>
+
+//                     <button className="btn ">Choose Player</button>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default PlayerCard;

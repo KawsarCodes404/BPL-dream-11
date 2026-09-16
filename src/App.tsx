@@ -1,11 +1,11 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import Banner from "./components/Banner"
 import Nav from "./components/Nav"
 import Players from "./components/players/Players";
 import type { Iplayer } from "./types/player";
 
 
-const playersFetch = async () : Promise<Iplayer[]> => {
+const playersFetch = async (): Promise<Iplayer[]> => {
 
   const res = await fetch('/data.json')
   const data = await res.json();
@@ -17,14 +17,16 @@ const playersFetch = async () : Promise<Iplayer[]> => {
 function App() {
   const playersPromise = playersFetch();
 
+  const [coin, setcoin] = useState(1500);  // It's like a variable !
+
   return (
     <>
-      <Nav />
+      <Nav coin = {coin} />
 
       <Banner />
 
       <Suspense fallback={<h1>Loading...</h1>}>
-        <Players playersPromise={playersPromise} />
+        <Players playersPromise={playersPromise} coin={coin} setcoin={setcoin} />
       </Suspense>
     </>
   )

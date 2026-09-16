@@ -6,7 +6,7 @@
     "playerType": "All-Rounder",
     "BowlingStyle": "Left-arm Orthodox",
     "BattingStyle": "Left-hand Bat",
-    "Price": 8500000
+    "Price": 500
   },
   {
     "playerName": "Babar Azam",
@@ -15,7 +15,7 @@
     "playerType": "Batter",
     "BowlingStyle": "Right-arm Off Break",
     "BattingStyle": "Right-hand Bat",
-    "Price": 9000000
+    "Price": 700
   },
   {
     "playerName": "Virat Kohli",
@@ -24,7 +24,7 @@
     "playerType": "Batter",
     "BowlingStyle": "Right-arm Medium",
     "BattingStyle": "Right-hand Bat",
-    "Price": 10000000
+    "Price": 700
   },
   {
     "playerName": "Rashid Khan",
@@ -33,7 +33,7 @@
     "playerType": "Bowler",
     "BowlingStyle": "Right-arm Leg Break",
     "BattingStyle": "Right-hand Bat",
-    "Price": 9500000
+    "Price": 900
   },
   {
     "playerName": "Ben Stokes",
@@ -42,7 +42,7 @@
     "playerType": "All-Rounder",
     "BowlingStyle": "Right-arm Fast-Medium",
     "BattingStyle": "Left-hand Bat",
-    "Price": 9200000
+    "Price": 800
   },
   {
     "playerName": "Jasprit Bumrah",
@@ -51,7 +51,7 @@
     "playerType": "Bowler",
     "BowlingStyle": "Right-arm Fast",
     "BattingStyle": "Right-hand Bat",
-    "Price": 8800000
+    "Price": 700
   },
   {
     "playerName": "Jos Buttler",
@@ -60,7 +60,7 @@
     "playerType": "Wicket-Keeper Batter",
     "BowlingStyle": "Right-arm Medium",
     "BattingStyle": "Right-hand Bat",
-    "Price": 8700000
+    "Price": 800
   },
   {
     "playerName": "Trent Boult",
@@ -69,7 +69,7 @@
     "playerType": "Bowler",
     "BowlingStyle": "Left-arm Fast-Medium",
     "BattingStyle": "Left-hand Bat",
-    "Price": 7800000
+    "Price": 500
   },
   {
     "playerName": "Glenn Maxwell",
@@ -78,7 +78,7 @@
     "playerType": "All-Rounder",
     "BowlingStyle": "Right-arm Off Break",
     "BattingStyle": "Right-hand Bat",
-    "Price": 8200000
+    "Price": 900
   },
   {
     "playerName": "Mustafizur Rahman",
@@ -87,6 +87,6 @@
     "playerType": "Bowler",
     "BowlingStyle": "Left-arm Fast-Medium",
     "BattingStyle": "Left-hand Bat",
-    "Price": 7200000
+    "Price": 878
   }
 ]

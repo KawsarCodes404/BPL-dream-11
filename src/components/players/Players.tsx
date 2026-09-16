@@ -1,22 +1,26 @@
-import { use, useState } from "react";
+import { use, useState, type Dispatch, type SetStateAction } from "react";
 import type { Iplayer } from "../../types/player";
 import AvailablePlayers from "./AvailablePlayers";
 import SelectedPlayers from "./SelectedPlayers";
 
 interface PlayersProps {
     playersPromise: Promise<Iplayer[]>;
+    coin: number;
+    setcoin: Dispatch<SetStateAction<number>>;
 }
 
-const Players = ({ playersPromise }: PlayersProps) => {
+const Players = ({ playersPromise, coin, setcoin }: PlayersProps) => {
 
     const players = use(playersPromise);
 
-    const [buttonType, setbuttonType] = useState("Available");  // It holds Data, just like a variable does !  [state , set state]  !
+    const [buttonType, setbuttonType] = useState<"Available" | "Selected">("Available");  // It holds Data, just like a variable does !  [state , set state]  !
 
     // console.log(test);
     // const handleUpdateBtnType = (type : "Available" | "Selected") => {
     //     setbuttonType(type)
     // }
+
+    const [selectedPlayers, setselectedPlayers] = useState<Iplayer[]>([]);
 
     return (
         <div className="container mx-auto">
@@ -45,7 +49,22 @@ const Players = ({ playersPromise }: PlayersProps) => {
 
 
             {/* Players card section */}
-            {buttonType === "Available" ? <AvailablePlayers players={players} /> : <SelectedPlayers />}
+            {buttonType === "Available" ? (
+                <AvailablePlayers
+                    players={players}
+                    coin={coin}
+                    setcoin={setcoin}  // All of these props are passed as an object !
+                    selectedPlayers={selectedPlayers}
+                    setselectedPlayers={setselectedPlayers}
+                />
+            ) : (
+                <SelectedPlayers
+                    coin={coin}
+                    setcoin={setcoin}  // All of these props are passed as an object !
+                    selectedPlayers={selectedPlayers}
+                    setselectedPlayers={setselectedPlayers}
+                />
+            )}
         </div>
     );
 };
