@@ -11,7 +11,11 @@ interface PlayersProps {
 
 const Players = ({ playersPromise, coin, setcoin }: PlayersProps) => {
 
+    // const playersData = use(playersPromise);
+    
     const players = use(playersPromise);
+
+    // const [players] = useState(playersData);
 
     const [buttonType, setbuttonType] = useState<"Available" | "Selected">("Available");  // It holds Data, just like a variable does !  [state , set state]  !
 

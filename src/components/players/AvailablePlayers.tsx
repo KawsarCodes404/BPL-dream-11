@@ -21,14 +21,16 @@ const AvailablePlayers = ({
         <div className="grid grid-cols-3 gap-7 mt-8">
             {
                 players.map((player: Iplayer, idx: number) => {
-                    return <PlayerCard
-                        key={idx}
-                        player={player}
-                        coin={coin}
-                        setcoin={setcoin}
-                        selectedPlayers={selectedPlayers}
-                        setselectedPlayers={setselectedPlayers}
-                    />
+                    return (
+                      <PlayerCard
+                         key={idx}
+                         player={player}
+                         coin={coin}
+                         setcoin={setcoin}
+                         selectedPlayers={selectedPlayers}
+                         setselectedPlayers={setselectedPlayers}
+                      />)
+
                 })
             }
         </div>

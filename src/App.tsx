@@ -15,9 +15,11 @@ const playersFetch = async (): Promise<Iplayer[]> => {
 
 
 function App() {
-  const playersPromise = playersFetch();
+  // const playersPromise = playersFetch();
 
-  const [coin, setcoin] = useState(1500);  // It's like a variable !
+  const [playersPromise] = useState(() => playersFetch());
+
+  const [coin, setcoin] = useState(2500);  // It's like a variable !
 
   return (
     <>

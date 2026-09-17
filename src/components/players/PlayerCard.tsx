@@ -40,6 +40,8 @@ const PlayerCard = ({
                 theme: "colored",
                 transition: Bounce,
             });
+
+            setselectedPlayers([...selectedPlayers, player]);
         }
         else toast.error('Coin is not enough to purchase');
     }
